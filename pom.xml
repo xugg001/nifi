@@ -12,24 +12,6 @@
         <module>nifi-nar-bundles</module>
     </modules>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.surefire.arguments/>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mockito.version>3.11.2</mockito.version>
-        <nifi.groovy.version>3.0.8</nifi.groovy.version>
-    </properties>
-
-    <mailingLists>
-        <mailingList>
-            <name>xugg001</name>
-            <post>xugg001@gmail.com</post>
-        </mailingList>
-    </mailingLists>
-
     <repositories>
         <repository>
             <id>central</id>
@@ -98,6 +80,31 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <scm>
+        <connection>scm:svn:http://127.0.0.1/dummy</connection>
+        <developerConnection>scm:svn:https://127.0.0.1/dummy</developerConnection>
+        <tag>HEAD</tag>
+        <url>http://127.0.0.1/dummy</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.surefire.arguments/>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <mockito.version>3.11.2</mockito.version>
+        <nifi.groovy.version>3.0.8</nifi.groovy.version>
+    </properties>
+
+    <mailingLists>
+        <mailingList>
+            <name>xugg001</name>
+            <post>xugg001@gmail.com</post>
+        </mailingList>
+    </mailingLists>
+
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -110,15 +117,16 @@
     <build>
         <resources>
             <resource>
-                <directory>${project.basedir}/src/main/resources</directory>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
         <testResources>
             <testResource>
-                <directory>${project.basedir}/src/test/resources</directory>
+                <directory>src/test/resources</directory>
             </testResource>
         </testResources>
-        <sourceDirectory>${project.basedir}/java/src/main</sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
